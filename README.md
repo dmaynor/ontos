@@ -7,6 +7,12 @@ relationships, and definitions that say what your data *means* — and serves it
 to agents through deterministic queries. Every answer carries its provenance:
 the certified terms it used, the query that ran, and where the data came from.
 
+The difference is certification. An LLM proposes term definitions; a human
+certifies them; and the serving path is deterministic — it never calls a
+model. A term that has not been certified is a draft, and drafts are never
+served: a question that needs one is refused, by name, until a human
+certifies it. Most ontology tooling skips that step. Ontos is the step.
+
 > **Status: slice 1 shipped in 0.1.0.** The quickstart below runs the complete
 > generate → certify → ask loop, including the same question answered through
 > an MCP server. Anything beyond the slice-1 scope listed below — free-form
