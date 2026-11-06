@@ -46,6 +46,10 @@ benchmark record as the first real dataset.
   through the MCP server in the demo.
 - Contributor surface: `CONTRIBUTING.md`, issue and pull request
   templates.
+- Distribution name: the project's PyPI distribution name is
+  `apex-ontos` (the APEX family brand), while the project, repository,
+  import package, and CLI command remain Ontos / `ontos`. This release
+  is GitHub-only; no PyPI upload has been made.
 - Automated tests covering generation, the certification gate (including
   negative controls), answers and provenance, the MCP round trip, and the
   APEX dataset path.

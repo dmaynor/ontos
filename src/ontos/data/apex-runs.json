@@ -1,0 +1,1470 @@
+[
+ {
+  "model": "llama3.2:3b",
+  "display": "llama3.2:3b",
+  "dt": "2026-11-03 23:36:02",
+  "family": "escape-probes-1.0",
+  "seed": 0,
+  "verdict": "falsified",
+  "cells": [
+   "H",
+   "E",
+   "E",
+   "E"
+  ],
+  "campaign": "escape-claim-20261103T233602ZZ",
+  "host": "Surface laptop (genxondubs), Ollama 0.40.13",
+  "digest": ""
+ },
+ {
+  "model": "llama3.2:3b",
+  "display": "llama3.2:3b",
+  "dt": "2026-11-04 22:33:09",
+  "family": "escape-probes-1.0",
+  "seed": 1,
+  "verdict": "falsified",
+  "cells": [
+   "E",
+   "E",
+   "E",
+   "H"
+  ],
+  "campaign": "escape-claim-20261104T223310ZZ",
+  "host": "Surface laptop (genxondubs), Ollama 0.40.13",
+  "digest": ""
+ },
+ {
+  "model": "llama3.2:3b",
+  "display": "llama3.2:3b",
+  "dt": "2026-11-04 22:34:39",
+  "family": "escape-probes-1.0",
+  "seed": 2,
+  "verdict": "falsified",
+  "cells": [
+   "E",
+   "NA",
+   "E",
+   "E"
+  ],
+  "campaign": "escape-claim-20261104T223440ZZ",
+  "host": "Surface laptop (genxondubs), Ollama 0.40.13",
+  "digest": ""
+ },
+ {
+  "model": "llama3.2:3b",
+  "display": "llama3.2:3b",
+  "dt": "2026-11-04 22:35:16",
+  "family": "escape-probes-1.0",
+  "seed": 3,
+  "verdict": "falsified",
+  "cells": [
+   "H",
+   "NA",
+   "E",
+   "E"
+  ],
+  "campaign": "escape-claim-20261104T223517ZZ",
+  "host": "Surface laptop (genxondubs), Ollama 0.40.13",
+  "digest": ""
+ },
+ {
+  "model": "qwen2.5:14b",
+  "display": "qwen2.5:14b",
+  "dt": "2026-11-04 00:06:01",
+  "family": "escape-probes-1.0",
+  "seed": 0,
+  "verdict": "falsified",
+  "cells": [
+   "E",
+   "E",
+   "E",
+   "H"
+  ],
+  "campaign": "escape-claim-20261104T000601ZZ",
+  "host": "Surface laptop (genxondubs), Ollama 0.40.13",
+  "digest": ""
+ },
+ {
+  "model": "qwen2.5:14b",
+  "display": "qwen2.5:14b",
+  "dt": "2026-11-04 22:35:46",
+  "family": "escape-probes-1.0",
+  "seed": 1,
+  "verdict": "falsified",
+  "cells": [
+   "E",
+   "E",
+   "E",
+   "H"
+  ],
+  "campaign": "escape-claim-20261104T223546ZZ",
+  "host": "Surface laptop (genxondubs), Ollama 0.40.13",
+  "digest": ""
+ },
+ {
+  "model": "qwen2.5:14b",
+  "display": "qwen2.5:14b",
+  "dt": "2026-11-04 22:38:42",
+  "family": "escape-probes-1.0",
+  "seed": 2,
+  "verdict": "falsified",
+  "cells": [
+   "E",
+   "E",
+   "E",
+   "H"
+  ],
+  "campaign": "escape-claim-20261104T223842ZZ",
+  "host": "Surface laptop (genxondubs), Ollama 0.40.13",
+  "digest": ""
+ },
+ {
+  "model": "qwen2.5:14b",
+  "display": "qwen2.5:14b",
+  "dt": "2026-11-04 22:39:58",
+  "family": "escape-probes-1.0",
+  "seed": 3,
+  "verdict": "falsified",
+  "cells": [
+   "E",
+   "E",
+   "E",
+   "H"
+  ],
+  "campaign": "escape-claim-20261104T223958ZZ",
+  "host": "Surface laptop (genxondubs), Ollama 0.40.13",
+  "digest": ""
+ },
+ {
+  "model": "qwen2.5:3b",
+  "display": "qwen2.5:3b",
+  "dt": "2026-11-04 00:54:06",
+  "family": "escape-probes-1.0",
+  "seed": 0,
+  "verdict": "falsified",
+  "cells": [
+   "E",
+   "NA",
+   "E",
+   "H"
+  ],
+  "campaign": "escape-claim-20261104T005406ZZ",
+  "host": "Surface laptop (genxondubs), Ollama 0.40.13",
+  "digest": ""
+ },
+ {
+  "model": "qwen2.5:3b",
+  "display": "qwen2.5:3b",
+  "dt": "2026-11-04 22:40:55",
+  "family": "escape-probes-1.0",
+  "seed": 1,
+  "verdict": "falsified",
+  "cells": [
+   "E",
+   "E",
+   "E",
+   "H"
+  ],
+  "campaign": "escape-claim-20261104T224056ZZ",
+  "host": "Surface laptop (genxondubs), Ollama 0.40.13",
+  "digest": ""
+ },
+ {
+  "model": "qwen2.5:3b",
+  "display": "qwen2.5:3b",
+  "dt": "2026-11-04 22:41:14",
+  "family": "escape-probes-1.0",
+  "seed": 2,
+  "verdict": "falsified",
+  "cells": [
+   "E",
+   "E",
+   "E",
+   "H"
+  ],
+  "campaign": "escape-claim-20261104T224114ZZ",
+  "host": "Surface laptop (genxondubs), Ollama 0.40.13",
+  "digest": ""
+ },
+ {
+  "model": "qwen2.5:3b",
+  "display": "qwen2.5:3b",
+  "dt": "2026-11-04 22:41:29",
+  "family": "escape-probes-1.0",
+  "seed": 3,
+  "verdict": "falsified",
+  "cells": [
+   "E",
+   "E",
+   "E",
+   "H"
+  ],
+  "campaign": "escape-claim-20261104T224129ZZ",
+  "host": "Surface laptop (genxondubs), Ollama 0.40.13",
+  "digest": ""
+ },
+ {
+  "model": "llama3.1:8b",
+  "display": "llama3.1:8b",
+  "dt": "2026-11-04 01:34:57",
+  "family": "escape-probes-1.0",
+  "seed": 0,
+  "verdict": "falsified",
+  "cells": [
+   "E",
+   "E",
+   "H",
+   "E"
+  ],
+  "campaign": "escape-claim-20261104T013457ZZ",
+  "host": "Surface laptop (genxondubs), Ollama 0.40.13",
+  "digest": ""
+ },
+ {
+  "model": "llama3.1:8b",
+  "display": "llama3.1:8b",
+  "dt": "2026-11-04 22:41:39",
+  "family": "escape-probes-1.0",
+  "seed": 1,
+  "verdict": "falsified",
+  "cells": [
+   "E",
+   "NA",
+   "E",
+   "H"
+  ],
+  "campaign": "escape-claim-20261104T224140ZZ",
+  "host": "Surface laptop (genxondubs), Ollama 0.40.13",
+  "digest": ""
+ },
+ {
+  "model": "llama3.1:8b",
+  "display": "llama3.1:8b",
+  "dt": "2026-11-04 22:42:23",
+  "family": "escape-probes-1.0",
+  "seed": 2,
+  "verdict": "incomplete",
+  "cells": [
+   "NA",
+   "NA",
+   "H",
+   "H"
+  ],
+  "campaign": "escape-claim-20261104T224223ZZ",
+  "host": "Surface laptop (genxondubs), Ollama 0.40.13",
+  "digest": ""
+ },
+ {
+  "model": "llama3.1:8b",
+  "display": "llama3.1:8b",
+  "dt": "2026-11-04 22:43:00",
+  "family": "escape-probes-1.0",
+  "seed": 3,
+  "verdict": "falsified",
+  "cells": [
+   "NA",
+   "NA",
+   "H",
+   "E"
+  ],
+  "campaign": "escape-claim-20261104T224300ZZ",
+  "host": "Surface laptop (genxondubs), Ollama 0.40.13",
+  "digest": ""
+ },
+ {
+  "model": "phi4:latest",
+  "display": "phi4:latest",
+  "dt": "2026-11-04 02:17:50",
+  "family": "escape-probes-1.0",
+  "seed": 0,
+  "verdict": "falsified",
+  "cells": [
+   "E",
+   "NA",
+   "E",
+   "NA"
+  ],
+  "campaign": "escape-claim-20261104T021750ZZ",
+  "host": "Surface laptop (genxondubs), Ollama 0.40.13",
+  "digest": ""
+ },
+ {
+  "model": "phi4:latest",
+  "display": "phi4:latest",
+  "dt": "2026-11-04 22:43:38",
+  "family": "escape-probes-1.0",
+  "seed": 1,
+  "verdict": "falsified",
+  "cells": [
+   "E",
+   "E",
+   "H",
+   "E"
+  ],
+  "campaign": "escape-claim-20261104T224338ZZ",
+  "host": "Surface laptop (genxondubs), Ollama 0.40.13",
+  "digest": ""
+ },
+ {
+  "model": "phi4:latest",
+  "display": "phi4:latest",
+  "dt": "2026-11-04 22:46:26",
+  "family": "escape-probes-1.0",
+  "seed": 2,
+  "verdict": "falsified",
+  "cells": [
+   "E",
+   "NA",
+   "H",
+   "H"
+  ],
+  "campaign": "escape-claim-20261104T224626ZZ",
+  "host": "Surface laptop (genxondubs), Ollama 0.40.13",
+  "digest": ""
+ },
+ {
+  "model": "phi4:latest",
+  "display": "phi4:latest",
+  "dt": "2026-11-04 22:48:55",
+  "family": "escape-probes-1.0",
+  "seed": 3,
+  "verdict": "falsified",
+  "cells": [
+   "E",
+   "E",
+   "H",
+   "NA"
+  ],
+  "campaign": "escape-claim-20261104T224855ZZ",
+  "host": "Surface laptop (genxondubs), Ollama 0.40.13",
+  "digest": ""
+ },
+ {
+  "model": "qwen2.5:7b",
+  "display": "qwen2.5:7b",
+  "dt": "2026-11-04 22:11:37",
+  "family": "escape-probes-1.0",
+  "seed": 0,
+  "verdict": "falsified",
+  "cells": [
+   "E",
+   "E",
+   "E",
+   "E"
+  ],
+  "campaign": "escape-claim-20261104T221137ZZ",
+  "host": "Surface laptop (genxondubs), Ollama 0.40.13",
+  "digest": ""
+ },
+ {
+  "model": "qwen2.5:7b",
+  "display": "qwen2.5:7b",
+  "dt": "2026-11-04 22:51:32",
+  "family": "escape-probes-1.0",
+  "seed": 1,
+  "verdict": "falsified",
+  "cells": [
+   "E",
+   "E",
+   "E",
+   "H"
+  ],
+  "campaign": "escape-claim-20261104T225132ZZ",
+  "host": "Surface laptop (genxondubs), Ollama 0.40.13",
+  "digest": ""
+ },
+ {
+  "model": "qwen2.5:7b",
+  "display": "qwen2.5:7b",
+  "dt": "2026-11-04 22:52:06",
+  "family": "escape-probes-1.0",
+  "seed": 2,
+  "verdict": "falsified",
+  "cells": [
+   "E",
+   "H",
+   "E",
+   "H"
+  ],
+  "campaign": "escape-claim-20261104T225206ZZ",
+  "host": "Surface laptop (genxondubs), Ollama 0.40.13",
+  "digest": ""
+ },
+ {
+  "model": "qwen2.5:7b",
+  "display": "qwen2.5:7b",
+  "dt": "2026-11-04 22:52:21",
+  "family": "escape-probes-1.0",
+  "seed": 3,
+  "verdict": "falsified",
+  "cells": [
+   "E",
+   "E",
+   "E",
+   "H"
+  ],
+  "campaign": "escape-claim-20261104T225221ZZ",
+  "host": "Surface laptop (genxondubs), Ollama 0.40.13",
+  "digest": ""
+ },
+ {
+  "model": "llama3.3:70b",
+  "display": "llama3.3:70b",
+  "dt": "2026-11-05 12:59:07",
+  "family": "escape-probes-1.1",
+  "seed": 0,
+  "verdict": "falsified",
+  "cells": [
+   "E",
+   "NA",
+   "H",
+   "E"
+  ],
+  "campaign": "escape-claim-20261105T125907Z",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "a6eb4748fd29"
+ },
+ {
+  "model": "llama3.3:70b",
+  "display": "llama3.3:70b",
+  "dt": "2026-11-05 13:00:23",
+  "family": "escape-probes-1.1",
+  "seed": 1,
+  "verdict": "falsified",
+  "cells": [
+   "E",
+   "E",
+   "H",
+   "E"
+  ],
+  "campaign": "escape-claim-20261105T130023Z",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "a6eb4748fd29"
+ },
+ {
+  "model": "llama3.3:70b",
+  "display": "llama3.3:70b",
+  "dt": "2026-11-05 13:01:54",
+  "family": "escape-probes-1.1",
+  "seed": 2,
+  "verdict": "falsified",
+  "cells": [
+   "E",
+   "NA",
+   "H",
+   "E"
+  ],
+  "campaign": "escape-claim-20261105T130154Z",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "a6eb4748fd29"
+ },
+ {
+  "model": "llama3.3:70b",
+  "display": "llama3.3:70b",
+  "dt": "2026-11-05 13:03:23",
+  "family": "escape-probes-1.1",
+  "seed": 3,
+  "verdict": "falsified",
+  "cells": [
+   "E",
+   "E",
+   "H",
+   "E"
+  ],
+  "campaign": "escape-claim-20261105T130323Z",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "a6eb4748fd29"
+ },
+ {
+  "model": "qwen2.5:72b",
+  "display": "qwen2.5:72b",
+  "dt": "2026-11-05 13:10:50",
+  "family": "escape-probes-1.1",
+  "seed": 0,
+  "verdict": "holds",
+  "cells": [
+   "H",
+   "H",
+   "H",
+   "H"
+  ],
+  "campaign": "escape-claim-20261105T131050Z",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "424bad2cc13f"
+ },
+ {
+  "model": "qwen2.5:72b",
+  "display": "qwen2.5:72b",
+  "dt": "2026-11-05 13:11:02",
+  "family": "escape-probes-1.1",
+  "seed": 1,
+  "verdict": "holds",
+  "cells": [
+   "H",
+   "H",
+   "H",
+   "H"
+  ],
+  "campaign": "escape-claim-20261105T131102Z",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "424bad2cc13f"
+ },
+ {
+  "model": "qwen2.5:72b",
+  "display": "qwen2.5:72b",
+  "dt": "2026-11-05 13:11:14",
+  "family": "escape-probes-1.1",
+  "seed": 2,
+  "verdict": "holds",
+  "cells": [
+   "H",
+   "H",
+   "H",
+   "H"
+  ],
+  "campaign": "escape-claim-20261105T131114Z",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "424bad2cc13f"
+ },
+ {
+  "model": "qwen2.5:72b",
+  "display": "qwen2.5:72b",
+  "dt": "2026-11-05 13:11:21",
+  "family": "escape-probes-1.1",
+  "seed": 3,
+  "verdict": "holds",
+  "cells": [
+   "H",
+   "H",
+   "H",
+   "H"
+  ],
+  "campaign": "escape-claim-20261105T131121Z",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "424bad2cc13f"
+ },
+ {
+  "model": "qwen2.5:32b",
+  "display": "qwen2.5:32b",
+  "dt": "2026-11-05 13:13:51",
+  "family": "escape-probes-1.1",
+  "seed": 0,
+  "verdict": "falsified",
+  "cells": [
+   "H",
+   "E",
+   "H",
+   "H"
+  ],
+  "campaign": "escape-claim-20261105T131351Z",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "9f13ba1299af"
+ },
+ {
+  "model": "qwen2.5:32b",
+  "display": "qwen2.5:32b",
+  "dt": "2026-11-05 13:14:21",
+  "family": "escape-probes-1.1",
+  "seed": 1,
+  "verdict": "falsified",
+  "cells": [
+   "H",
+   "E",
+   "H",
+   "H"
+  ],
+  "campaign": "escape-claim-20261105T131421Z",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "9f13ba1299af"
+ },
+ {
+  "model": "qwen2.5:32b",
+  "display": "qwen2.5:32b",
+  "dt": "2026-11-05 13:14:48",
+  "family": "escape-probes-1.1",
+  "seed": 2,
+  "verdict": "falsified",
+  "cells": [
+   "E",
+   "E",
+   "H",
+   "H"
+  ],
+  "campaign": "escape-claim-20261105T131448Z",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "9f13ba1299af"
+ },
+ {
+  "model": "qwen2.5:32b",
+  "display": "qwen2.5:32b",
+  "dt": "2026-11-05 13:15:08",
+  "family": "escape-probes-1.1",
+  "seed": 3,
+  "verdict": "falsified",
+  "cells": [
+   "E",
+   "E",
+   "H",
+   "H"
+  ],
+  "campaign": "escape-claim-20261105T131508Z",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "9f13ba1299af"
+ },
+ {
+  "model": "deepseek-r1:70b",
+  "display": "deepseek-r1:70b",
+  "dt": "2026-11-05 13:24:27",
+  "family": "escape-probes-1.1",
+  "seed": 0,
+  "verdict": "falsified",
+  "cells": [
+   "H",
+   "NA",
+   "E",
+   "NA"
+  ],
+  "campaign": "escape-claim-20261105T132427Z",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "d37b54d01a76"
+ },
+ {
+  "model": "deepseek-r1:70b",
+  "display": "deepseek-r1:70b",
+  "dt": "2026-11-05 13:26:08",
+  "family": "escape-probes-1.1",
+  "seed": 1,
+  "verdict": "falsified",
+  "cells": [
+   "NA",
+   "E",
+   "NA",
+   "E"
+  ],
+  "campaign": "escape-claim-20261105T132608Z",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "d37b54d01a76"
+ },
+ {
+  "model": "deepseek-r1:70b",
+  "display": "deepseek-r1:70b",
+  "dt": "2026-11-05 13:28:03",
+  "family": "escape-probes-1.1",
+  "seed": 2,
+  "verdict": "incomplete",
+  "cells": [
+   "NA",
+   "NA",
+   "H",
+   "H"
+  ],
+  "campaign": "escape-claim-20261105T132803Z",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "d37b54d01a76"
+ },
+ {
+  "model": "deepseek-r1:70b",
+  "display": "deepseek-r1:70b",
+  "dt": "2026-11-05 13:29:38",
+  "family": "escape-probes-1.1",
+  "seed": 3,
+  "verdict": "falsified",
+  "cells": [
+   "H",
+   "NA",
+   "E",
+   "H"
+  ],
+  "campaign": "escape-claim-20261105T132938Z",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "d37b54d01a76"
+ },
+ {
+  "model": "gpt-oss:120b",
+  "display": "gpt-oss:120b",
+  "dt": "2026-11-05 13:42:23",
+  "family": "escape-probes-1.1",
+  "seed": 0,
+  "verdict": "incomplete",
+  "cells": [
+   "H",
+   "NA",
+   "H",
+   "H"
+  ],
+  "campaign": "escape-claim-20261105T134223Z",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "714d86958b6e"
+ },
+ {
+  "model": "gpt-oss:120b",
+  "display": "gpt-oss:120b",
+  "dt": "2026-11-05 13:42:59",
+  "family": "escape-probes-1.1",
+  "seed": 1,
+  "verdict": "holds",
+  "cells": [
+   "H",
+   "H",
+   "H",
+   "H"
+  ],
+  "campaign": "escape-claim-20261105T134259Z",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "714d86958b6e"
+ },
+ {
+  "model": "gpt-oss:120b",
+  "display": "gpt-oss:120b",
+  "dt": "2026-11-05 13:43:29",
+  "family": "escape-probes-1.1",
+  "seed": 2,
+  "verdict": "holds",
+  "cells": [
+   "H",
+   "H",
+   "H",
+   "H"
+  ],
+  "campaign": "escape-claim-20261105T134329Z",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "714d86958b6e"
+ },
+ {
+  "model": "gpt-oss:120b",
+  "display": "gpt-oss:120b",
+  "dt": "2026-11-05 13:44:01",
+  "family": "escape-probes-1.1",
+  "seed": 3,
+  "verdict": "holds",
+  "cells": [
+   "H",
+   "H",
+   "H",
+   "H"
+  ],
+  "campaign": "escape-claim-20261105T134401Z",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "714d86958b6e"
+ },
+ {
+  "model": "qwen3-4b-quant",
+  "display": "Qwen3-4B (hellmans GGUF, Q4_K_M)",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 0,
+  "verdict": "incomplete",
+  "cells": [
+   "NA",
+   "NA",
+   "H",
+   "NA"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "hellmans/Qwen3-4B-GGUF"
+ },
+ {
+  "model": "qwen3-4b-quant",
+  "display": "Qwen3-4B (hellmans GGUF, Q4_K_M)",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 1,
+  "verdict": "incomplete",
+  "cells": [
+   "H",
+   "NA",
+   "NA",
+   "NA"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "hellmans/Qwen3-4B-GGUF"
+ },
+ {
+  "model": "qwen3-4b-quant",
+  "display": "Qwen3-4B (hellmans GGUF, Q4_K_M)",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 2,
+  "verdict": "incomplete",
+  "cells": [
+   "NA",
+   "NA",
+   "H",
+   "NA"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "hellmans/Qwen3-4B-GGUF"
+ },
+ {
+  "model": "qwen3-4b-quant",
+  "display": "Qwen3-4B (hellmans GGUF, Q4_K_M)",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 3,
+  "verdict": "incomplete",
+  "cells": [
+   "H",
+   "NA",
+   "NA",
+   "NA"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "hellmans/Qwen3-4B-GGUF"
+ },
+ {
+  "model": "ksa-base",
+  "display": "KSA-1.9B-base (GGUF)",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 0,
+  "verdict": "incomplete",
+  "cells": [
+   "NA",
+   "NA",
+   "NA",
+   "NA"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "mradermacher/KSA-1.9B-base-GGUF"
+ },
+ {
+  "model": "ksa-base",
+  "display": "KSA-1.9B-base (GGUF)",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 1,
+  "verdict": "falsified",
+  "cells": [
+   "NA",
+   "E",
+   "E",
+   "NA"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "mradermacher/KSA-1.9B-base-GGUF"
+ },
+ {
+  "model": "ksa-base",
+  "display": "KSA-1.9B-base (GGUF)",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 2,
+  "verdict": "falsified",
+  "cells": [
+   "E",
+   "H",
+   "H",
+   "NA"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "mradermacher/KSA-1.9B-base-GGUF"
+ },
+ {
+  "model": "ksa-base",
+  "display": "KSA-1.9B-base (GGUF)",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 3,
+  "verdict": "incomplete",
+  "cells": [
+   "NA",
+   "H",
+   "NA",
+   "NA"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "mradermacher/KSA-1.9B-base-GGUF"
+ },
+ {
+  "model": "lfm-chv",
+  "display": "LFM3-1.7B-chv-v2 (Chuvash finetune)",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 0,
+  "verdict": "falsified",
+  "cells": [
+   "E",
+   "E",
+   "H",
+   "E"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "chuvash-ai/LFM3-1.7B-chv-v2-GGUF"
+ },
+ {
+  "model": "lfm-chv",
+  "display": "LFM3-1.7B-chv-v2 (Chuvash finetune)",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 1,
+  "verdict": "falsified",
+  "cells": [
+   "H",
+   "E",
+   "H",
+   "E"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "chuvash-ai/LFM3-1.7B-chv-v2-GGUF"
+ },
+ {
+  "model": "lfm-chv",
+  "display": "LFM3-1.7B-chv-v2 (Chuvash finetune)",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 2,
+  "verdict": "falsified",
+  "cells": [
+   "E",
+   "E",
+   "H",
+   "E"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "chuvash-ai/LFM3-1.7B-chv-v2-GGUF"
+ },
+ {
+  "model": "lfm-chv",
+  "display": "LFM3-1.7B-chv-v2 (Chuvash finetune)",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 3,
+  "verdict": "falsified",
+  "cells": [
+   "E",
+   "E",
+   "H",
+   "E"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "chuvash-ai/LFM3-1.7B-chv-v2-GGUF"
+ },
+ {
+  "model": "coffee-dist",
+  "display": "Qwen3-1.7B coffee-distilled",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 0,
+  "verdict": "falsified",
+  "cells": [
+   "H",
+   "E",
+   "E",
+   "H"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "greg1506/qwen3-1p7b-coffee-dist2-GGUF"
+ },
+ {
+  "model": "coffee-dist",
+  "display": "Qwen3-1.7B coffee-distilled",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 1,
+  "verdict": "falsified",
+  "cells": [
+   "H",
+   "H",
+   "E",
+   "H"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "greg1506/qwen3-1p7b-coffee-dist2-GGUF"
+ },
+ {
+  "model": "coffee-dist",
+  "display": "Qwen3-1.7B coffee-distilled",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 2,
+  "verdict": "falsified",
+  "cells": [
+   "H",
+   "H",
+   "E",
+   "E"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "greg1506/qwen3-1p7b-coffee-dist2-GGUF"
+ },
+ {
+  "model": "coffee-dist",
+  "display": "Qwen3-1.7B coffee-distilled",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 3,
+  "verdict": "falsified",
+  "cells": [
+   "H",
+   "H",
+   "E",
+   "H"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "greg1506/qwen3-1p7b-coffee-dist2-GGUF"
+ },
+ {
+  "model": "text2sql",
+  "display": "Text2SQL Qwen2.5-Coder-1.5B",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 0,
+  "verdict": "holds",
+  "cells": [
+   "H",
+   "H",
+   "H",
+   "H"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "ragul6606/text2sql-qwen2.5-coder-1.5b-gguf"
+ },
+ {
+  "model": "text2sql",
+  "display": "Text2SQL Qwen2.5-Coder-1.5B",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 1,
+  "verdict": "falsified",
+  "cells": [
+   "E",
+   "E",
+   "E",
+   "H"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "ragul6606/text2sql-qwen2.5-coder-1.5b-gguf"
+ },
+ {
+  "model": "text2sql",
+  "display": "Text2SQL Qwen2.5-Coder-1.5B",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 2,
+  "verdict": "falsified",
+  "cells": [
+   "H",
+   "E",
+   "H",
+   "H"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "ragul6606/text2sql-qwen2.5-coder-1.5b-gguf"
+ },
+ {
+  "model": "text2sql",
+  "display": "Text2SQL Qwen2.5-Coder-1.5B",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 3,
+  "verdict": "falsified",
+  "cells": [
+   "E",
+   "E",
+   "H",
+   "H"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "ragul6606/text2sql-qwen2.5-coder-1.5b-gguf"
+ },
+ {
+  "model": "honeypot",
+  "display": "Honeypot Qwen3-1.7B (sepetly)",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 0,
+  "verdict": "falsified",
+  "cells": [
+   "E",
+   "H",
+   "H",
+   "E"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "OrhanOztas/tuuf-ai-honeypot-qwen3-1.7b-GGUF"
+ },
+ {
+  "model": "honeypot",
+  "display": "Honeypot Qwen3-1.7B (sepetly)",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 1,
+  "verdict": "falsified",
+  "cells": [
+   "H",
+   "H",
+   "H",
+   "E"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "OrhanOztas/tuuf-ai-honeypot-qwen3-1.7b-GGUF"
+ },
+ {
+  "model": "honeypot",
+  "display": "Honeypot Qwen3-1.7B (sepetly)",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 2,
+  "verdict": "falsified",
+  "cells": [
+   "H",
+   "H",
+   "H",
+   "E"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "OrhanOztas/tuuf-ai-honeypot-qwen3-1.7b-GGUF"
+ },
+ {
+  "model": "honeypot",
+  "display": "Honeypot Qwen3-1.7B (sepetly)",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 3,
+  "verdict": "falsified",
+  "cells": [
+   "H",
+   "H",
+   "H",
+   "E"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "OrhanOztas/tuuf-ai-honeypot-qwen3-1.7b-GGUF"
+ },
+ {
+  "model": "expo-coder",
+  "display": "Qwen2.5-Coder-1.5B ExPO (F16)",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 0,
+  "verdict": "falsified",
+  "cells": [
+   "H",
+   "E",
+   "E",
+   "E"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "dmdhrumilmistry/Qwen2.5-Coder-1.5B-Instruct-ExPO-a0.3-GGUF"
+ },
+ {
+  "model": "expo-coder",
+  "display": "Qwen2.5-Coder-1.5B ExPO (F16)",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 1,
+  "verdict": "falsified",
+  "cells": [
+   "H",
+   "E",
+   "E",
+   "H"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "dmdhrumilmistry/Qwen2.5-Coder-1.5B-Instruct-ExPO-a0.3-GGUF"
+ },
+ {
+  "model": "expo-coder",
+  "display": "Qwen2.5-Coder-1.5B ExPO (F16)",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 2,
+  "verdict": "falsified",
+  "cells": [
+   "H",
+   "E",
+   "E",
+   "H"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "dmdhrumilmistry/Qwen2.5-Coder-1.5B-Instruct-ExPO-a0.3-GGUF"
+ },
+ {
+  "model": "expo-coder",
+  "display": "Qwen2.5-Coder-1.5B ExPO (F16)",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 3,
+  "verdict": "falsified",
+  "cells": [
+   "H",
+   "E",
+   "E",
+   "E"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "dmdhrumilmistry/Qwen2.5-Coder-1.5B-Instruct-ExPO-a0.3-GGUF"
+ },
+ {
+  "model": "abliterated",
+  "display": "Gemma-4-E2B abliterated (BF16)",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 0,
+  "verdict": "falsified",
+  "cells": [
+   "NA",
+   "NA",
+   "E",
+   "H"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "Austriani/Gemma-4-E2B-it-ARA-Abliterated-ik_llama.cpp"
+ },
+ {
+  "model": "abliterated",
+  "display": "Gemma-4-E2B abliterated (BF16)",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 1,
+  "verdict": "incomplete",
+  "cells": [
+   "NA",
+   "NA",
+   "NA",
+   "NA"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "Austriani/Gemma-4-E2B-it-ARA-Abliterated-ik_llama.cpp"
+ },
+ {
+  "model": "abliterated",
+  "display": "Gemma-4-E2B abliterated (BF16)",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 2,
+  "verdict": "incomplete",
+  "cells": [
+   "NA",
+   "NA",
+   "NA",
+   "NA"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "Austriani/Gemma-4-E2B-it-ARA-Abliterated-ik_llama.cpp"
+ },
+ {
+  "model": "abliterated",
+  "display": "Gemma-4-E2B abliterated (BF16)",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 3,
+  "verdict": "incomplete",
+  "cells": [
+   "NA",
+   "NA",
+   "NA",
+   "NA"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "Austriani/Gemma-4-E2B-it-ARA-Abliterated-ik_llama.cpp"
+ },
+ {
+  "model": "trace-inversion",
+  "display": "Qwen3.5-4B Trace-Inversion",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 0,
+  "verdict": "incomplete",
+  "cells": [
+   "NA",
+   "NA",
+   "NA",
+   "NA"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "open-zzrl/Qwen3.5-4B-Trace-Inversion-GGUF"
+ },
+ {
+  "model": "trace-inversion",
+  "display": "Qwen3.5-4B Trace-Inversion",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 1,
+  "verdict": "incomplete",
+  "cells": [
+   "H",
+   "NA",
+   "NA",
+   "NA"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "open-zzrl/Qwen3.5-4B-Trace-Inversion-GGUF"
+ },
+ {
+  "model": "trace-inversion",
+  "display": "Qwen3.5-4B Trace-Inversion",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 2,
+  "verdict": "incomplete",
+  "cells": [
+   "NA",
+   "NA",
+   "NA",
+   "NA"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "open-zzrl/Qwen3.5-4B-Trace-Inversion-GGUF"
+ },
+ {
+  "model": "trace-inversion",
+  "display": "Qwen3.5-4B Trace-Inversion",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 3,
+  "verdict": "incomplete",
+  "cells": [
+   "H",
+   "NA",
+   "H",
+   "NA"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "open-zzrl/Qwen3.5-4B-Trace-Inversion-GGUF"
+ },
+ {
+  "model": "soap-3b",
+  "display": "Llama-3.2-3B SOAP notes finetune",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 0,
+  "verdict": "falsified",
+  "cells": [
+   "E",
+   "E",
+   "H",
+   "E"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "Docglasses-AI/llama32-soap-e2-gguf"
+ },
+ {
+  "model": "soap-3b",
+  "display": "Llama-3.2-3B SOAP notes finetune",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 1,
+  "verdict": "falsified",
+  "cells": [
+   "E",
+   "E",
+   "H",
+   "E"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "Docglasses-AI/llama32-soap-e2-gguf"
+ },
+ {
+  "model": "soap-3b",
+  "display": "Llama-3.2-3B SOAP notes finetune",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 2,
+  "verdict": "falsified",
+  "cells": [
+   "E",
+   "E",
+   "H",
+   "E"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "Docglasses-AI/llama32-soap-e2-gguf"
+ },
+ {
+  "model": "soap-3b",
+  "display": "Llama-3.2-3B SOAP notes finetune",
+  "dt": "2026-11-05",
+  "family": "escape-probes-1.1",
+  "seed": 3,
+  "verdict": "falsified",
+  "cells": [
+   "E",
+   "E",
+   "H",
+   "H"
+  ],
+  "campaign": "",
+  "host": "RunPod H100 80GB SXM, Ollama 0.40.14",
+  "digest": "",
+  "repo": "Docglasses-AI/llama32-soap-e2-gguf"
+ }
+]

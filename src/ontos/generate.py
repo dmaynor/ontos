@@ -89,6 +89,20 @@ def run_generate(store: Store, source: str, env: dict | None = None) -> dict:
     """Generate drafts from `source` into `store`. Returns a summary."""
     tables = ingest.read_metadata(source)
     terms = build_terms(tables)
+    # A source may also ship candidate vocabulary (see ingest): terms its
+    # schema cannot express. They enter as drafts with human origin -
+    # authored by whoever built the dataset - and face the same gate.
+    for entry in ingest.read_vocabulary(source):
+        terms.append(
+            Term(
+                name=entry["name"],
+                kind=entry["kind"],
+                definition=entry["definition"],
+                origin="human",
+                source_table=entry["source_table"],
+                source_column=entry["source_column"],
+            )
+        )
     config = enrich.llm_config(env)
     enriched = 0
     if config:

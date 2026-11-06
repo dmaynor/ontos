@@ -3,7 +3,10 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "ontos"
+# Distribution name (PyPI): apex-ontos - the APEX family brand, ruled by
+# David 2026-11-05. The project, repo, import package, and CLI command
+# are all still named Ontos / ontos; only the distribution name differs.
+name = "apex-ontos"
 version = "0.1.0"
 description = "A certification-first auto-ontology layer for agents: generate a semantic layer from your data's metadata, certify the definitions, query deterministically - every answer carries its provenance."
 readme = "README.md"
@@ -29,6 +32,9 @@ ontos = "ontos.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+ontos = ["data/*.json"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

@@ -100,6 +100,43 @@ def read_sqlite_metadata(path: Path) -> list[TableMeta]:
         conn.close()
 
 
+def read_vocabulary(source: str) -> list[dict]:
+    """Candidate terms a source ships about itself, if any.
+
+    A source database may carry a ``vocabulary`` table - (term_name,
+    kind, definition, source_table, source_column) - proposing terms its
+    schema alone cannot express (a controlled vocabulary's values, for
+    instance). Generate drafts them like any other proposal: labeled,
+    uncertified, never served until a human certifies them. Sources
+    without the table simply have no vocabulary.
+    """
+    if source_kind(source) == "postgres":
+        return []
+    path = sqlite_path(source)
+    if not path.exists():
+        return []
+    conn = sqlite3.connect(f"file:{path}?mode=ro", uri=True)
+    try:
+        exists = conn.execute(
+            "SELECT 1 FROM sqlite_master WHERE type = 'table' AND name = 'vocabulary'"
+        ).fetchone()
+        if not exists:
+            return []
+        rows = conn.execute(
+            "SELECT term_name, kind, definition, source_table, source_column "
+            "FROM vocabulary ORDER BY term_name"
+        ).fetchall()
+        return [
+            {
+                "name": r[0], "kind": r[1], "definition": r[2],
+                "source_table": r[3], "source_column": r[4],
+            }
+            for r in rows
+        ]
+    finally:
+        conn.close()
+
+
 def read_postgres_metadata(url: str) -> list[TableMeta]:
     try:
         import psycopg  # type: ignore

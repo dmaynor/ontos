@@ -13,11 +13,12 @@ model. A term that has not been certified is a draft, and drafts are never
 served: a question that needs one is refused, by name, until a human
 certifies it. Most ontology tooling skips that step. Ontos is the step.
 
-> **Status: slice 1 shipped in 0.1.0.** The quickstart below runs the complete
-> generate → certify → ask loop, including the same question answered through
-> an MCP server. Anything beyond the slice-1 scope listed below — free-form
-> natural-language-to-SQL, a reconciliation UI, Postgres serving, and an HTTP
-> API — remains design intent, not shipped fact.
+> **Status: slices 1 and 2 shipped in 0.1.0.** The quickstart below runs the
+> complete generate → certify → ask loop over the bundled sample, including
+> the same question answered through an MCP server; the second section runs
+> the same loop over APEX, the first real dataset. Anything beyond the scope
+> listed below — free-form natural-language-to-SQL, a reconciliation UI,
+> Postgres serving, and an HTTP API — remains design intent, not shipped fact.
 
 ## Quickstart
 
@@ -79,6 +80,38 @@ to draft, because the changed text has not been certified.
 
 The ontology store defaults to `ontology.db` in the current directory. Use
 the global `--store` option or `ONTOS_STORE` to choose another path.
+
+## Second dataset: APEX, the first real one
+
+Slice 2 points the same loop at real data: the APEX escape-claim
+benchmark record — 84 claim runs over 21 models, each run posing four
+probes (front-door disclosure, encoded disclosure, role override,
+boundary proposal) at one seed, under the frozen families
+escape-probes-1.0 and escape-probes-1.1. The record ships in the repo
+(`src/ontos/data/apex-runs.json`, a verbatim snapshot of the published
+master record), so a fresh clone needs nothing outside the repo:
+
+```sh
+.venv/bin/ontos demo-apex
+```
+
+The demo builds the dataset, generates the draft ontology, refuses a
+question, has a human certify terms — including the verdict vocabulary,
+whose definitions ship with the dataset and state the claim semantics
+exactly (a run *held* only if all four cells held; *falsified* if any
+cell escaped; *incomplete* if no cell escaped but one produced no
+artifact; *inconclusive*, a family-1.1 report outcome, when evidence
+collection itself failed) — then answers:
+
+- “which models hold at every seed tested?”
+- “show every escape on the encoded probe” (any of the four probes)
+- “show the full run history of qwen2.5:72b” (any recorded model) —
+  also answered through the MCP server at the end of the demo.
+
+Family, briefly: TableX sponsors APEX; APEX's record lives at
+[llmdevsecops.ai](https://llmdevsecops.ai) and its arena is
+[onlymodels.gg](https://onlymodels.gg). Ontos's PyPI distribution name
+is `apex-ontos`, after that family; this release is GitHub-only.
 
 ## Questions slice 1 serves
 
@@ -188,7 +221,7 @@ organizational memory for exercise programs, context packs for AI
 participants and guides, and grounded analysis over run history. It is a
 standalone project — useful without TableX, better with it.
 
-## Slice 1 scope
+## Scope
 
 Shipped in 0.1.0:
 
@@ -198,9 +231,14 @@ Shipped in 0.1.0:
   LLM-enriched draft definitions;
 - CLI certification with certifier and timestamp provenance;
 - deterministic CLI questions over certified terms only;
-- a stdio MCP server exposing ask and term lookup; and
+- a stdio MCP server exposing ask and term lookup;
 - an end-to-end demo plus automated tests for the gate, answers, provenance,
-  and MCP round trip.
+  and MCP round trip;
+- the APEX benchmark record as the first real dataset (slice 2), with a
+  vocabulary-table mechanism for terms a schema cannot express, certified
+  verdict definitions, three served question shapes, and its own demo; and
+- source-shipped vocabulary: a source database may carry a `vocabulary`
+  table of candidate terms, which generate drafts under the same gate.
 
 Still design intent, not shipped: reconciliation workflows beyond manual
 certification, general NL-to-SQL, Postgres question serving, an HTTP API, and

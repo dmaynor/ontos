@@ -18,3 +18,5 @@ jobs:
         run: pytest -q
       - name: Demo smoke run (the slice-1 acceptance loop)
         run: python -m ontos demo
+      - name: APEX demo smoke run (the slice-2 acceptance loop)
+        run: python -m ontos demo-apex

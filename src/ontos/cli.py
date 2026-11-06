@@ -1,4 +1,5 @@
-"""The Ontos CLI: sample, generate, certify, terms, ask, demo, mcp-serve.
+"""The Ontos CLI: sample, apex-sample, generate, certify, terms, ask,
+demo, demo-apex, mcp-serve.
 
 Exit codes for `ask`: 0 = answered, 3 = refused (uncertified terms),
 4 = unsupported question shape. A refusal is the gate working, not an
@@ -17,7 +18,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-from ontos import __version__, sample, service
+from ontos import __version__, apex, sample, service
 from ontos.generate import run_generate
 from ontos.store import Store
 
@@ -35,6 +36,23 @@ CERTIFY_SUBSET_A = [
 ]
 CERTIFY_SUBSET_B = ["event", "event.occurred_at", "event.in_run"]
 
+APEX_HOLDS_QUESTION = "which models hold at every seed tested?"
+APEX_HISTORY_QUESTION = "show the full run history of qwen2.5:72b"
+APEX_ESCAPES_QUESTION = "show every escape on the encoded probe"
+
+APEX_CERTIFY_SUBSET_A = [
+    "model",
+    "claim_run", "claim_run.in_model", "claim_run.in_probe_family",
+    "claim_run.seed", "claim_run.verdict",
+    "verdict.held",
+]
+APEX_CERTIFY_SUBSET_B = [
+    "claim_run.started_at", "claim_run.campaign_id", "claim_run.host",
+    "claim_run.served_digest",
+    "cell", "cell.in_claim_run", "cell.in_probe", "cell.outcome",
+    "probe",
+]
+
 
 def _default_certifier(args) -> str:
     return getattr(args, "certifier", None) or os.environ.get("ONTOS_CERTIFIER") or getpass.getuser()
@@ -48,6 +66,19 @@ def cmd_sample(args) -> int:
         print(f"error: {exc}", file=sys.stderr)
         return 1
     print(f"Sample database written to {args.out}:")
+    for table, n in counts.items():
+        print(f"  {table}: {n} rows")
+    return 0
+
+
+# ---------------------------------------------------------- apex-sample
+def cmd_apex_sample(args) -> int:
+    try:
+        counts = apex.create_apex_db(args.out, force=args.force)
+    except FileExistsError as exc:
+        print(f"error: {exc}", file=sys.stderr)
+        return 1
+    print(f"APEX dataset database written to {args.out}:")
     for table, n in counts.items():
         print(f"  {table}: {n} rows")
     return 0
@@ -244,7 +275,7 @@ def _check(cond: bool, msg: str) -> None:
         raise RuntimeError(f"demo check failed: {msg}")
 
 
-async def _mcp_step(store_path: Path, env: dict) -> dict:
+async def _mcp_step(store_path: Path, env: dict, question: str = BRIEF_QUESTION) -> dict:
     from mcp import ClientSession
     from mcp.client.stdio import StdioServerParameters, stdio_client
 
@@ -260,7 +291,7 @@ async def _mcp_step(store_path: Path, env: dict) -> dict:
             names = [t.name for t in tools.tools]
             print(f"MCP tools exposed: {', '.join(names)}")
             _check("ask" in names and "get_term" in names, "MCP tool list")
-            result = await session.call_tool("ask", {"question": BRIEF_QUESTION})
+            result = await session.call_tool("ask", {"question": question})
             payload = None
             if getattr(result, "structuredContent", None):
                 payload = result.structuredContent
@@ -348,6 +379,95 @@ def cmd_demo(args) -> int:
     return 0
 
 
+# ------------------------------------------------------------ demo-apex
+def cmd_demo_apex(args) -> int:
+    workspace = Path(args.dir)
+    certifier = args.certifier
+    print("=" * 70)
+    print("Ontos APEX demo: the first real dataset, same loop, same gate")
+    print("Source: the APEX escape-claim record bundled in this repo")
+    print("(84 claim runs, 336 cells, 21 models, families 1.0 and 1.1).")
+    print("Note: model credentials are scrubbed - `generate` proves its")
+    print("deterministic template-draft fallback, no LLM involved.")
+    print("=" * 70)
+    if workspace.exists():
+        shutil.rmtree(workspace)
+    workspace.mkdir(parents=True)
+    env = _demo_env()
+    py = [sys.executable, "-m", "ontos", "--store", "ontology.db"]
+    try:
+        rc, _ = _run_step(py + ["apex-sample", "--out", "apex.db"], workspace, env)
+        _check(rc == 0, "APEX dataset creation")
+
+        rc, _ = _run_step(py + ["generate", "--source", "apex.db"], workspace, env)
+        _check(rc == 0, "generate over the APEX dataset")
+
+        print("\n-- The gate: asking before anything is certified --")
+        rc, out = _run_step(py + ["ask", APEX_HOLDS_QUESTION], workspace, env)
+        _check(rc == EXIT_REFUSED and "Refused" in out,
+               "uncertified APEX question must be refused")
+
+        print("\n-- The verdict vocabulary arrived with the dataset --")
+        print("The APEX source ships a vocabulary table, so generate has")
+        print("drafted verdict.held / .falsified / .incomplete /")
+        print(".inconclusive terms carrying the benchmark's precise claim")
+        print("definitions. They are drafts like everything else - the")
+        print("certification below is what makes them servable.")
+
+        rc, _ = _run_step(
+            py + ["certify", "--as", certifier, "--accept"] + APEX_CERTIFY_SUBSET_A,
+            workspace, env,
+        )
+        _check(rc == 0, "certify APEX subset A")
+
+        rc, out = _run_step(py + ["ask", APEX_HOLDS_QUESTION], workspace, env)
+        _check(rc == 0 and "qwen2.5:72b" in out and "gpt-oss:120b" not in out,
+               "only qwen2.5:72b held at every seed under one family")
+
+        print("\n-- The gate again: the history needs run-detail terms --")
+        rc, out = _run_step(py + ["ask", APEX_HISTORY_QUESTION], workspace, env)
+        _check(rc == EXIT_REFUSED and "claim_run.started_at" in out,
+               "history must refuse until the detail terms are certified")
+
+        rc, _ = _run_step(
+            py + ["certify", "--as", certifier, "--accept"] + APEX_CERTIFY_SUBSET_B,
+            workspace, env,
+        )
+        _check(rc == 0, "certify APEX subset B")
+
+        rc, out = _run_step(py + ["ask", APEX_HISTORY_QUESTION], workspace, env)
+        _check(rc == 0 and "Run history for qwen2.5:72b (4 runs)" in out
+               and "held/held/held/held" in out,
+               "qwen2.5:72b history with all-held cells")
+
+        rc, out = _run_step(py + ["ask", APEX_ESCAPES_QUESTION], workspace, env)
+        _check(rc == 0 and "Escapes on the encoded probe (39)" in out,
+               "every escape on the encoded probe")
+
+        print("\n-- The history question through the MCP server (real client call) --")
+        print(f'ask("{APEX_HISTORY_QUESTION}") via MCP stdio')
+        payload = asyncio.run(
+            _mcp_step(workspace / "ontology.db", env, question=APEX_HISTORY_QUESTION)
+        )
+        print(json.dumps(payload, indent=2)[:1600])
+        _check(payload.get("status") == "answered", "MCP APEX ask answered")
+        _check(bool(payload.get("terms_used")), "MCP APEX ask carries term provenance")
+        _check(
+            all(t.get("certified_by") == certifier for t in payload["terms_used"]),
+            "MCP APEX provenance names the certifier",
+        )
+        _check(len(payload.get("rows", [])) == 4, "MCP APEX history returns 4 runs")
+    except RuntimeError as exc:
+        print(f"\nDEMO FAILED: {exc}", file=sys.stderr)
+        return 1
+    print("\n" + "=" * 70)
+    print("APEX DEMO COMPLETE: the benchmark record, drafted -> certified ->")
+    print("served with provenance, the gate refusing along the way. In:")
+    print(f"  {workspace.resolve()}")
+    print("=" * 70)
+    return 0
+
+
 # ----------------------------------------------------------------- main
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
@@ -366,6 +486,11 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--out", default="sample.db", help="output path (default: sample.db)")
     p.add_argument("--force", action="store_true", help="overwrite if it exists")
     p.set_defaults(fn=cmd_sample)
+
+    p = sub.add_parser("apex-sample", help="build the APEX dataset database (first real dataset)")
+    p.add_argument("--out", default="apex.db", help="output path (default: apex.db)")
+    p.add_argument("--force", action="store_true", help="overwrite if it exists")
+    p.set_defaults(fn=cmd_apex_sample)
 
     p = sub.add_parser("generate", help="draft an ontology from a source database")
     p.add_argument("--source", required=True,
@@ -399,6 +524,12 @@ def build_parser() -> argparse.ArgumentParser:
                    help="workspace directory (reset on each run; default: demo-workspace)")
     p.add_argument("--certifier", default="Demo Certifier")
     p.set_defaults(fn=cmd_demo)
+
+    p = sub.add_parser("demo-apex", help="run the APEX-dataset end-to-end demo")
+    p.add_argument("--dir", default="apex-demo-workspace",
+                   help="workspace directory (reset on each run; default: apex-demo-workspace)")
+    p.add_argument("--certifier", default="Demo Certifier")
+    p.set_defaults(fn=cmd_demo_apex)
 
     p = sub.add_parser("mcp-serve", help="run the MCP server (stdio)")
     p.set_defaults(fn=cmd_mcp_serve)
